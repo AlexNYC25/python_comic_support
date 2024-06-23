@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  web:
+  api:
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,6 +13,14 @@ services:
       - .env
     depends_on:
       - redis
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    volumes:
+      - ./client:/app
 
   redis:
     image: "redis:alpine"

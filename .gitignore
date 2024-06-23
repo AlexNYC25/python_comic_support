@@ -182,3 +182,10 @@ build/
 /app/uploads/processed/*
 /app/uploads/uploads/*
 /app/uploads/public/*
+
+/client/.vscode/
+/client/node_modules/
+/client/build/
+/client/.env
+/client/.env.local
+/client/package-lock.json
